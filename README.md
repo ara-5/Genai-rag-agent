@@ -1,55 +1,38 @@
-# 🔐 GenAI RAG System – Local AI Document Q&A
+# 📄 GenAI RAG Document Assistant
 
-A fully local **Retrieval-Augmented Generation (RAG)** system that allows users to ask questions about their documents using an open-source LLM — **no OpenAI API required**.
-
-Built with:
-- FAISS for vector search
-- SentenceTransformers for embeddings
-- GPT4All (Orca Mini) for local inference
+**GenAI RAG** is a local AI-powered document assistant that allows you to **ask questions from your uploaded documents** using a **Retrieval-Augmented Generation (RAG)** system and **local GenAI models**.  
+Built using **Python, Streamlit, GPT4All, FAISS, and Sentence-Transformers**.
 
 ---
 
-## 🚀 Features
-- 📄 Upload PDF documents
-- 🧠 Semantic search using embeddings
-- 🔍 Context-aware answers (RAG)
-- 📴 Fully offline & privacy-preserving
-- 💻 Runs on CPU (no GPU required)
+## ⚡ Features
+
+- Ask natural language questions about your documents.
+- Uses a **local AI model** — no internet required after setup.
+- Embeds documents using **SentenceTransformers**.
+- Efficient **vector search with FAISS**.
+- Simple **Streamlit UI** for easy interaction.
+- Works offline — perfect for private, sensitive documents.
 
 ---
 
-## 🧱 Architecture
+## 🛠 Tech Stack
 
-PDF → Chunking → Embeddings → FAISS
-↓
-User Query
-↓
-Retrieved Context
-↓
-Local LLM Response
-
+| Component | Technology |
+|-----------|-----------|
+| Frontend / UI | Streamlit |
+| Language Model | GPT4All |
+| Embeddings | Sentence-Transformers (`all-MiniLM-L6-v2`) |
+| Vector Database | FAISS |
+| Document Loader | LangChain Community (`PyPDFLoader`) |
+| Python Version | 3.11 |
 
 ---
 
-## 🛠️ Setup Instructions
+## 🚀 Getting Started
+
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/genai-rag-agent
-cd genai-rag-agent
-pip install -r requirements.txt
-python ingestion/load_documents.py
-python app/rag_qa.py
-
-
-
-
-
-🎯 Use Cases
-
-Internal knowledge base
-
-Resume / document analysis
-
-Secure enterprise AI assistant
-
-Legal / healthcare document QA
+git clone https://github.com/ara-5/Genai-rag-agent.git
+cd Genai-rag-agent
